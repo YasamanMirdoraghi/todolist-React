@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #372469;
+}
+.App {
+    text-align: center;
+    background-color:#242058;
+    width: 600px;
+    height: auto;
+    padding-bottom: 10px;
+    margin: 150px  auto;
+    border-radius: 15px;
+  }
+  
+  .box1{
+    background-color: #161052;
+    border-radius: 12px;
+    width: 300px;
+    height: 100px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .box1::before{
+    content: '';
+    position: absolute;
+    height: auto;
+    inset: -100px 110px ;
+    background: linear-gradient(305deg , #00ccff,#d400d4);
+    transition: 0.5s;
+    animation: animate 3s linear infinite;
+  }
+
+  .box1::after{
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background-color: #161052;
+  }
+  .box1:hover::before{
+    inset: -20px 0px;
+  }
+
+  @keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+  }
+
+  .box1>h1{
+    color: white;
+        z-index: 1;
+        font-family: 'Times New Roman', Times, serif;
+
+  }
+  /*  END box1 */
+
+  .todo-container {
+    margin-bottom: 20px;
+    /* background-color: #161052; */
+    width: 450px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    border-radius: 12px;
+
+  }
+  .todo-container>input{
+    border: none;
+    text-align: start;
+    padding-left: 10px;
+    border-radius: 12px;
+    width: 330px;
+    height:30px;
+    font-size: 18px;
+  }
+  .todo-container>input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+  .todo-container>button{
+    margin-left: 10px;
+    width: 90px;
+    padding: 4px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .todolist {
+    list-style-type: none;
+    padding: 0;
+    border-radius: 12px;
+    width: 450px;
+    margin: 20px auto;
+    padding: 0px 10px ;
+  }
+
+  .todolist li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+  }
+  
+  .todolist button {
+    /* margin-top: 5px; */
+    margin-left: 10px;
+    width: 80px;
+    border: none;
+    border-radius: 12px;
+  }
